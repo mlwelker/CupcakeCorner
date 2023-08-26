@@ -13,6 +13,7 @@
 		A23B2B582A98472E00BB95F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23B2B572A98472E00BB95F6 /* Preview Assets.xcassets */; };
 		A23B2B5F2A9878D600BB95F6 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23B2B5E2A9878D600BB95F6 /* Order.swift */; };
 		A23B2B612A99121300BB95F6 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23B2B602A99121300BB95F6 /* AddressView.swift */; };
+		A23B2B632A9913EE00BB95F6 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23B2B622A9913EE00BB95F6 /* CheckoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		A23B2B572A98472E00BB95F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A23B2B5E2A9878D600BB95F6 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		A23B2B602A99121300BB95F6 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		A23B2B622A9913EE00BB95F6 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +41,6 @@
 		A23B2B442A98472C00BB95F6 = {
 			isa = PBXGroup;
 			children = (
-				A23B2B602A99121300BB95F6 /* AddressView.swift */,
 				A23B2B4F2A98472C00BB95F6 /* CupcakeCorner */,
 				A23B2B4E2A98472C00BB95F6 /* Products */,
 			);
@@ -56,6 +57,8 @@
 		A23B2B4F2A98472C00BB95F6 /* CupcakeCorner */ = {
 			isa = PBXGroup;
 			children = (
+				A23B2B602A99121300BB95F6 /* AddressView.swift */,
+				A23B2B622A9913EE00BB95F6 /* CheckoutView.swift */,
 				A23B2B502A98472C00BB95F6 /* CupcakeCornerApp.swift */,
 				A23B2B522A98472C00BB95F6 /* ContentView.swift */,
 				A23B2B5E2A9878D600BB95F6 /* Order.swift */,
@@ -145,6 +148,7 @@
 			files = (
 				A23B2B5F2A9878D600BB95F6 /* Order.swift in Sources */,
 				A23B2B612A99121300BB95F6 /* AddressView.swift in Sources */,
+				A23B2B632A9913EE00BB95F6 /* CheckoutView.swift in Sources */,
 				A23B2B532A98472C00BB95F6 /* ContentView.swift in Sources */,
 				A23B2B512A98472C00BB95F6 /* CupcakeCornerApp.swift in Sources */,
 			);

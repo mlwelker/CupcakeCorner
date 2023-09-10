@@ -6,7 +6,15 @@ class Order: ObservableObject, Codable {
         case type, quantity, extraFrosting, addSprinkles, name, streetAddress, city, zip
     }
     
-    static let types = ["Vanilla", "Chocolate", "Strawberry", "Rainbow"]
+//    static let types = ["Vanilla", "Chocolate", "Strawberry", "Rainbow"]
+    enum Flavor: Identifiable, CaseIterable {
+        var id: Self { self }
+//        var id: Flavor
+        // enums without associated values are hashable by default
+        
+        case vanilla, chocolate, strawberry, rainbow
+        // implementation detail
+    }
     
     @Published var type = 0
     @Published var quantity = 3
@@ -68,6 +76,8 @@ class Order: ObservableObject, Codable {
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
+        
+//        container.encodeNil(forKey: .type)
         
         try container.encode(type, forKey: .type)
         try container.encode(quantity, forKey: .quantity)

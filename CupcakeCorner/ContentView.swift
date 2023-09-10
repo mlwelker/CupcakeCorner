@@ -9,8 +9,8 @@ struct ContentView: View {
             Form {
                 Section {
                     Picker("Select your cake type", selection: $order.type) {
-                        ForEach(Order.types.indices) {
-                            Text(Order.types[$0])
+                        ForEach(Order.Flavor.allCases) {
+                            $0.displayName
                         }
                     }
                     
@@ -35,6 +35,38 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Cupcake Corner")
+        }
+    }
+}
+
+extension Order.Flavor {
+    var displayName: Text {
+        // view concern -> written for the view
+        switch self {
+        case .vanilla:
+            return Text("Vanilla")
+        case .chocolate:
+            return Text("Chocolate")
+        case .strawberry:
+            return Text("Strawberry")
+            // pattern matching
+        case .rainbow:
+            return Text("Rainbow")
+        }
+    }
+    
+    var forInterpolation: String {
+        // view concern -> written for the view
+        switch self {
+        case .vanilla:
+            return "Vanilla"
+        case .chocolate:
+            return "Chocolate"
+        case .strawberry:
+            return "Strawberry"
+            // pattern matching
+        case .rainbow:
+            return "Rainbow"
         }
     }
 }

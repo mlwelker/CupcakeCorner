@@ -55,7 +55,7 @@ struct CheckoutView: View {
             let (data, _) = try await URLSession.shared.upload(for: request, from: encoded)
             
             let decodedOrder = try JSONDecoder().decode(Order.self, from: data)
-            confirmationMessage = "Your order for x\(decodedOrder.quantity) \(Order.types[decodedOrder.type]) cupcakes is on its way."
+            confirmationMessage = "Your order for x\(decodedOrder.quantity) \(Order.Flavor.allCases[decodedOrder.type].forInterpolation.lowercased()) cupcakes is on its way."
             alertMessage = "Thank you!"
             showingConfirmation = true
         } catch {
